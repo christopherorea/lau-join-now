@@ -1,30 +1,36 @@
 
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
+import { Check, Shield, TrendingUp, Laptop } from "lucide-react";
 
 const plans = [
   {
-    name: "Clarity Starter",
-    price: "$0",
-    description: "Explore AI financial insights at no cost.",
-    features: ["5 AI queries per month", "Standard market analysis", "Portfolio basic insights", "Community support"],
-    cta: "Start Free",
+    name: "Plan Lite",
+    price: "$775",
+    suffix: "MXN",
+    description: "Para usuarios que quieren el asistente en nuestra nube segura, disponible 24/7.",
+    features: ["Costo por uso o $1,500 MXN Intensivo", "Acceso en cualquier dispositivo", "Soporte estándar", "Nube privada dedicada"],
+    cta: "Comenzar Lite",
+    icon: Shield,
     featured: false
   },
   {
-    name: "Vest Pro",
-    price: "$29",
-    description: "For active investors seeking a data edge.",
-    features: ["Unlimited AI queries", "Advanced math-backed analysis", "Real-time sector alerts", "Priority AI processing", "Exportable reports"],
-    cta: "Get Pro Access",
+    name: "Plan Pro",
+    price: "Gestión",
+    suffix: "por Resultados",
+    description: "Modelo autosustentable. Solo cobramos honorarios si superas el 6% anual.",
+    features: ["Capital mínimo $150k MXN", "Gestión activa automatizada", "Honorarios basados en éxito", "Reportes semanales detallados"],
+    cta: "Solicitar Gestión Pro",
+    icon: TrendingUp,
     featured: true
   },
   {
-    name: "Institutional",
-    price: "Custom",
-    description: "Dedicated resources for large-scale analysis.",
-    features: ["API Access", "Custom risk modeling", "Dedicated strategist", "SLA guarantees"],
-    cta: "Contact Sales",
+    name: "Plan Elite",
+    price: "Propia",
+    suffix: "Infraestructura",
+    description: "Instalamos tu propia inteligencia en un servidor físico en tu hogar u oficina.",
+    features: ["25% de descuento a fundadores", "Soporte técnico prioritario", "Actualizaciones vitalicias", "Soberanía total de datos"],
+    cta: "Instalar Servidor Elite",
+    icon: Laptop,
     featured: false
   }
 ];
@@ -35,10 +41,10 @@ export function Pricing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            Simple, Transparent Pricing
+            Planes y Membresías
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Invest in clarity. Choose a plan that fits your analysis needs.
+            Elige el nivel de soberanía y acompañamiento que tu patrimonio merece.
           </p>
         </div>
 
@@ -46,22 +52,25 @@ export function Pricing() {
           {plans.map((plan, idx) => (
             <div 
               key={idx} 
-              className={`relative p-8 rounded-3xl border ${plan.featured ? 'border-primary ring-1 ring-primary shadow-xl bg-white' : 'border-border bg-background'}`}
+              className={`relative p-8 rounded-3xl border flex flex-col ${plan.featured ? 'border-primary ring-1 ring-primary shadow-xl bg-white' : 'border-border bg-background'}`}
             >
               {plan.featured && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full uppercase tracking-widest">
-                  Most Popular
+                  Más Popular
                 </div>
               )}
               <div className="mb-8">
-                <h3 className="text-xl font-bold text-primary">{plan.name}</h3>
+                <div className="flex items-center gap-2 mb-4">
+                  <plan.icon className="h-5 w-5 text-primary" />
+                  <h3 className="text-xl font-bold text-primary">{plan.name}</h3>
+                </div>
                 <div className="mt-4 flex items-baseline gap-1">
                   <span className="text-4xl font-extrabold tracking-tight">{plan.price}</span>
-                  {plan.price !== "Custom" && <span className="text-muted-foreground">/month</span>}
+                  <span className="text-muted-foreground text-sm">{plan.suffix}</span>
                 </div>
-                <p className="mt-4 text-sm text-muted-foreground">{plan.description}</p>
+                <p className="mt-4 text-sm text-muted-foreground min-h-[40px]">{plan.description}</p>
               </div>
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-4 mb-8 flex-1">
                 {plan.features.map((feature, fidx) => (
                   <li key={fidx} className="flex items-start gap-3 text-sm">
                     <Check className="h-5 w-5 text-accent shrink-0 mt-0.5" />
@@ -72,8 +81,9 @@ export function Pricing() {
               <Button 
                 variant={plan.featured ? "default" : "outline"} 
                 className={`w-full h-11 ${plan.featured ? 'bg-primary' : 'border-primary text-primary hover:bg-primary/5'}`}
+                asChild
               >
-                {plan.cta}
+                <a href="#founders">{plan.cta}</a>
               </Button>
             </div>
           ))}

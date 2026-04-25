@@ -15,15 +15,17 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-2">
             <TrendingUp className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold tracking-tight text-primary">ClarityVest AI</span>
+            <span className="text-xl font-bold tracking-tight text-primary">Asistente Soberano</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <Link href="#features" className="hover:text-primary transition-colors">Features</Link>
-            <Link href="#tools" className="hover:text-primary transition-colors">AI Tools</Link>
-            <Link href="#pricing" className="hover:text-primary transition-colors">Pricing</Link>
-            <Link href="#founders" className="hover:text-primary transition-colors">Waitlist</Link>
-            <Button size="sm" className="bg-primary text-primary-foreground">Get Started</Button>
+            <Link href="#features" className="hover:text-primary transition-colors">Beneficios</Link>
+            <Link href="#evidence" className="hover:text-primary transition-colors">Evidencia</Link>
+            <Link href="#pricing" className="hover:text-primary transition-colors">Planes</Link>
+            <Link href="#founders" className="hover:text-primary transition-colors">Fundadores</Link>
+            <Button size="sm" className="bg-primary text-primary-foreground" asChild>
+              <a href="#founders">Solicitar Acceso</a>
+            </Button>
           </div>
 
           <div className="md:hidden">
@@ -37,11 +39,13 @@ export function Navigation() {
       {isOpen && (
         <div className="md:hidden bg-background border-b animate-in slide-in-from-top duration-300">
           <div className="flex flex-col gap-4 p-4 text-sm font-medium">
-            <Link href="#features" onClick={() => setIsOpen(false)}>Features</Link>
-            <Link href="#tools" onClick={() => setIsOpen(false)}>AI Tools</Link>
-            <Link href="#pricing" onClick={() => setIsOpen(false)}>Pricing</Link>
-            <Link href="#founders" onClick={() => setIsOpen(false)}>Waitlist</Link>
-            <Button className="w-full">Get Started</Button>
+            <Link href="#features" onClick={() => setIsOpen(false)}>Beneficios</Link>
+            <Link href="#evidence" onClick={() => setIsOpen(false)}>Evidencia</Link>
+            <Link href="#pricing" onClick={() => setIsOpen(false)}>Planes</Link>
+            <Link href="#founders" onClick={() => setIsOpen(false)}>Fundadores</Link>
+            <Button className="w-full" asChild>
+              <a href="#founders">Solicitar Acceso</a>
+            </Button>
           </div>
         </div>
       )}

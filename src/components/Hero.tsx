@@ -14,32 +14,36 @@ export function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium animate-in fade-in slide-in-from-bottom-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium">
               <Sparkles className="h-4 w-4" />
-              <span>Investment Intelligence Reimagined</span>
+              <span>Inteligencia Financiera Soberana</span>
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight text-primary leading-[1.1]">
-              Clarity in Every <span className="text-accent">Investment</span> Decision.
+              Tu Patrimonio, Bajo tu <span className="text-accent">Propio Control</span>.
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Navigate the complex world of finance with AI-driven market analysis and mathematically-backed insights. Transparent, professional, and built for growth.
+              Activa a tu experto financiero digital. Una infraestructura privada que ha generado un 20% de retorno anual durante los últimos 3 años, optimizando tus inversiones con matemáticas avanzadas.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="h-12 px-8 text-lg bg-primary">Start Analyzing Now</Button>
-              <Button size="lg" variant="outline" className="h-12 px-8 text-lg border-primary text-primary hover:bg-primary/5">View Sample Insights</Button>
+              <Button size="lg" className="h-12 px-8 text-lg bg-primary" asChild>
+                <a href="#founders">Solicitar Acceso Founder</a>
+              </Button>
+              <Button size="lg" variant="outline" className="h-12 px-8 text-lg border-primary text-primary hover:bg-primary/5" asChild>
+                <a href="#evidence">Ver Rendimiento Histórico</a>
+              </Button>
             </div>
 
             <div className="flex items-center gap-8 pt-4">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <ShieldCheck className="h-5 w-5 text-accent" />
-                <span>Private & Secure</span>
+                <span>Privacidad Total</span>
               </div>
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <LineChart className="h-5 w-5 text-accent" />
-                <span>Data-Driven Growth</span>
+                <span>Retorno del 20% Anual</span>
               </div>
             </div>
           </div>

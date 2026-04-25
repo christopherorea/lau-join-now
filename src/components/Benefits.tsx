@@ -1,31 +1,31 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { BrainCircuit, Landmark, BarChart4, Zap } from "lucide-react";
+import { ShieldCheck, Target, Zap, BarChart3 } from "lucide-react";
 
 const features = [
   {
-    title: "AI-Generated Market Analysis",
-    description: "Receive deep dives into market trends powered by advanced LLMs trained on financial data.",
-    icon: BrainCircuit,
-    color: "text-secondary"
-  },
-  {
-    title: "Mathematically-Backed Responses",
-    description: "Every insight is cross-referenced with quantitative models to ensure analytical rigor.",
-    icon: Landmark,
-    color: "text-primary"
-  },
-  {
-    title: "Diversified Asset Allocation",
-    description: "Get high-level suggestions for balanced portfolios tailored to your specific goals.",
-    icon: BarChart4,
+    title: "Resultados Validados",
+    description: "No somos una promesa. Utilizamos el Modelo de Markowitz para maximizar ganancias arriesgando lo mínimo, con un historial probado de consistencia.",
+    icon: BarChart3,
     color: "text-accent"
   },
   {
-    title: "Instant Financial Clarity",
-    description: "Ditch the jargon. We translate complex market noise into actionable insights in seconds.",
+    title: "Privacidad por Diseño",
+    description: "Tu información financiera no es moneda de cambio. Tus datos y montos se mantienen en tu propio entorno privado con reglas estrictas de seguridad.",
+    icon: ShieldCheck,
+    color: "text-primary"
+  },
+  {
+    title: "Ejecución Inteligente",
+    description: "El asistente no solo analiza, actúa. Se conecta a tu cuenta de Bitso para realizar las operaciones necesarias, siempre bajo tu autorización previa.",
     icon: Zap,
     color: "text-yellow-500"
+  },
+  {
+    title: "Control Soberano",
+    description: "Tú eres el único dueño de las llaves. El sistema opera para ti, pero nunca tiene control total sobre el retiro de tus fondos.",
+    icon: Target,
+    color: "text-secondary"
   }
 ];
 
@@ -35,10 +35,10 @@ export function Benefits() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl">
-            Everything you need for disciplined investing
+            ¿Por qué elegir un Asistente Soberano?
           </h2>
           <p className="text-lg text-muted-foreground">
-            We provide the bridge between complex financial data and informed decision making.
+            La bridge perfecta entre la seguridad de tus datos y la optimización de tu capital.
           </p>
         </div>
 

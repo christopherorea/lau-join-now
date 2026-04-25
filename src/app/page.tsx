@@ -2,8 +2,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Benefits } from "@/components/Benefits";
-import { AIQueryTool } from "@/components/AIQueryTool";
-import { InvestmentInsightsTool } from "@/components/InvestmentInsightsTool";
+import { PerformanceChart } from "@/components/PerformanceChart";
 import { Pricing } from "@/components/Pricing";
 import { FoundersWaitlist } from "@/components/FoundersWaitlist";
 import { Footer } from "@/components/Footer";
@@ -15,8 +14,7 @@ export default function Home() {
       <main>
         <Hero />
         <Benefits />
-        <AIQueryTool />
-        <InvestmentInsightsTool />
+        <PerformanceChart />
         <Pricing />
         <FoundersWaitlist />
       </main>
