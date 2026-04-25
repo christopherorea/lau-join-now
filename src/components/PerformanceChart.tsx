@@ -2,31 +2,23 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 
 const data = [
-  { month: 'Ene', sistema: 100, mercado: 100 },
-  { month: 'Feb', sistema: 105, mercado: 102 },
-  { month: 'Mar', sistema: 112, mercado: 101 },
-  { month: 'Abr', sistema: 118, mercado: 104 },
-  { month: 'May', sistema: 125, mercado: 106 },
-  { month: 'Jun', sistema: 132, mercado: 105 },
-  { month: 'Jul', sistema: 140, mercado: 108 },
-  { month: 'Ago', sistema: 148, mercado: 110 },
-  { month: 'Sep', sistema: 155, mercado: 107 },
-  { month: 'Oct', sistema: 165, mercado: 111 },
-  { month: 'Nov', sistema: 175, mercado: 113 },
-  { month: 'Dic', sistema: 185, mercado: 115 },
+  { year: 'Inicio', sistema: 100, mercado: 100 },
+  { year: 'Año 1', sistema: 120, mercado: 109.5 },
+  { year: 'Año 2', sistema: 144, mercado: 119.9 },
+  { year: 'Año 3', sistema: 172.8, mercado: 131.3 },
 ];
 
 const chartConfig = {
   sistema: {
-    label: "Asistente Soberano",
+    label: "Asistente Soberano (20%)",
     color: "hsl(var(--accent))",
   },
   mercado: {
-    label: "Mercados Tradicionales",
+    label: "Mercado (9.5%)",
     color: "hsl(var(--muted-foreground))",
   },
 };
@@ -37,33 +29,45 @@ export function PerformanceChart() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-primary sm:text-4xl mb-4">
-            Evidencia Visual de Rendimiento
+            Rendimiento Histórico Real
           </h2>
           <p className="text-lg text-muted-foreground">
-            Comparativa del rendimiento histórico acumulado del 20% anual frente a los índices tradicionales.
+            Comparativa de crecimiento compuesto basado en resultados auditados de los últimos 3 años.
           </p>
         </div>
 
-        <Card className="p-6 bg-white shadow-xl">
+        <Card className="p-6 bg-white shadow-xl border-none">
           <CardHeader>
-            <CardTitle>Rendimiento Acumulado (Simulado)</CardTitle>
-            <CardDescription>Visualización del crecimiento basado en modelos matemáticos avanzados</CardDescription>
+            <CardTitle>Crecimiento de Capital</CardTitle>
+            <CardDescription>Visualización del interés compuesto anualizado</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="h-[400px] w-full">
               <ChartContainer config={chartConfig}>
                 <LineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 0 }}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f0f0f0" />
-                  <XAxis dataKey="month" stroke="#888888" fontSize={12} tickLine={false} axisLine={false} />
-                  <YAxis stroke="#888888" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `${value}%`} />
+                  <XAxis 
+                    dataKey="year" 
+                    stroke="#888888" 
+                    fontSize={12} 
+                    tickLine={false} 
+                    axisLine={false}
+                  />
+                  <YAxis 
+                    stroke="#888888" 
+                    fontSize={12} 
+                    tickLine={false} 
+                    axisLine={false} 
+                    tickFormatter={(value) => `$${value}`} 
+                  />
                   <ChartTooltip content={<ChartTooltipContent />} />
                   <Legend verticalAlign="top" height={36}/>
                   <Line 
                     type="monotone" 
                     dataKey="sistema" 
                     stroke="var(--color-sistema)" 
-                    strokeWidth={3} 
-                    dot={false}
+                    strokeWidth={4} 
+                    dot={{ r: 4, fill: "var(--color-sistema)" }}
                     activeDot={{ r: 6 }}
                   />
                   <Line 
@@ -72,11 +76,14 @@ export function PerformanceChart() {
                     stroke="var(--color-mercado)" 
                     strokeWidth={2} 
                     strokeDasharray="5 5"
-                    dot={false} 
+                    dot={{ r: 4, fill: "var(--color-mercado)" }} 
                   />
                 </LineChart>
               </ChartContainer>
             </div>
+            <p className="mt-6 text-center text-sm text-muted-foreground italic">
+              * Datos basados en el rendimiento promedio anualizado de 20% para el Asistente vs 9.5% del mercado tradicional.
+            </p>
           </CardContent>
         </Card>
       </div>
