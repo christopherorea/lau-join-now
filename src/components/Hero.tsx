@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -16,7 +15,7 @@ export function Hero() {
           <div className="space-y-8 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary text-sm font-medium">
               <Sparkles className="h-4 w-4" />
-              <span>Inteligencia Financiera Soberana</span>
+              <span>LAU: Local Agentic Utility</span>
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-extrabold tracking-tight text-primary leading-[1.1]">

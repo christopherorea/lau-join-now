@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -15,7 +14,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-2">
             <TrendingUp className="h-8 w-8 text-primary" />
-            <span className="text-xl font-bold tracking-tight text-primary">Asistente Soberano</span>
+            <span className="text-xl font-bold tracking-tight text-primary">LAU</span>
           </div>
 
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">

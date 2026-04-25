@@ -1,4 +1,3 @@
-
 import { TrendingUp } from "lucide-react";
 import Link from "next/link";
 
@@ -10,10 +9,10 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <TrendingUp className="h-6 w-6 text-primary" />
-              <span className="text-lg font-bold text-primary tracking-tight">Asistente Soberano</span>
+              <span className="text-lg font-bold text-primary tracking-tight">LAU: Local Agentic Utility</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs leading-relaxed text-center md:text-left">
-              Inteligencia financiera privada para el inversor libre.
+              Utilidad agéntica local para la soberanía financiera.
             </p>
           </div>
 
@@ -32,7 +31,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground uppercase tracking-widest font-medium opacity-60">
-          <p>© 2024 Asistente Soberano. Todos los derechos reservados.</p>
+          <p>© 2024 LAU. Todos los derechos reservados.</p>
           <p>Tu patrimonio, tus llaves, tu control.</p>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -24,7 +23,7 @@ export function FoundersWaitlist() {
             </h2>
             
             <p className="text-xl text-primary-foreground/80 leading-relaxed">
-              Solo abriremos 10 espacios con el 25% de descuento en la instalación de servidores físicos. Asegura tu prioridad y comienza a operar con inteligencia soberana.
+              Solo abriremos 10 espacios con el 25% de descuento en la instalación de servidores físicos. Asegura tu prioridad y comienza a operar con LAU.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6">

@@ -1,10 +1,9 @@
-
 import type {Metadata} from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'ClarityVest AI | Financial Intelligence Redefined',
-  description: 'AI-driven market analysis and investment insights for professional clarity and data-backed growth.',
+  title: 'LAU | Local Agentic Utility',
+  description: 'Inteligencia financiera privada y utilidad agéntica local para la optimización de capital.',
 };
 
 export default function RootLayout({
@@ -13,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="es" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

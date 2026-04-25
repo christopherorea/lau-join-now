@@ -1,4 +1,3 @@
-
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -6,15 +5,15 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'r
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 
 const data = [
-  { year: 'Inicio', sistema: 100, mercado: 100 },
-  { year: 'Año 1', sistema: 120, mercado: 109.5 },
-  { year: 'Año 2', sistema: 144, mercado: 119.9 },
-  { year: 'Año 3', sistema: 172.8, mercado: 131.3 },
+  { year: 'Inicio', lau: 100, mercado: 100 },
+  { year: 'Año 1', lau: 120, mercado: 109.5 },
+  { year: 'Año 2', lau: 144, mercado: 119.9 },
+  { year: 'Año 3', lau: 172.8, mercado: 131.3 },
 ];
 
 const chartConfig = {
-  sistema: {
-    label: "Asistente Soberano (20%)",
+  lau: {
+    label: "LAU (20%)",
     color: "hsl(var(--accent))",
   },
   mercado: {
@@ -64,10 +63,10 @@ export function PerformanceChart() {
                   <Legend verticalAlign="top" height={36}/>
                   <Line 
                     type="monotone" 
-                    dataKey="sistema" 
-                    stroke="var(--color-sistema)" 
+                    dataKey="lau" 
+                    stroke="var(--color-lau)" 
                     strokeWidth={4} 
-                    dot={{ r: 4, fill: "var(--color-sistema)" }}
+                    dot={{ r: 4, fill: "var(--color-lau)" }}
                     activeDot={{ r: 6 }}
                   />
                   <Line 
@@ -82,7 +81,7 @@ export function PerformanceChart() {
               </ChartContainer>
             </div>
             <p className="mt-6 text-center text-sm text-muted-foreground italic">
-              * Datos basados en el rendimiento promedio anualizado de 20% para el Asistente vs 9.5% del mercado tradicional.
+              * Datos basados en el rendimiento promedio anualizado de 20% para LAU vs 9.5% del mercado tradicional.
             </p>
           </CardContent>
         </Card>
