@@ -16,7 +16,7 @@ const features = [
   },
   {
     title: "Ejecución Inteligente",
-    description: "La utilidad no solo analiza, actúa. Se conecta a tu cuenta de Bitso para realizar las operaciones necesarias, siempre bajo tu autorización previa.",
+    description: "La utilidad no solo analiza, actúa. Se conecta a tu broker de confianza para realizar las operaciones necesarias, siempre bajo tu autorización previa.",
     icon: Zap,
     color: "text-yellow-500"
   },
