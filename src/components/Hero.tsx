@@ -7,15 +7,19 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ShieldCheck, LineChart, Sparkles } from "lucide-react";
 
 export function Hero() {
-  // Robust lookup with a hardcoded fallback
+  // Buscamos la imagen específica para el Hero de LAU
   const heroImage = (PlaceHolderImages && PlaceHolderImages.length > 0) 
-    ? PlaceHolderImages.find((img) => img.id === "hero-finance") || PlaceHolderImages[0]
+    ? PlaceHolderImages.find((img) => img.id === "lau-hero-main") || PlaceHolderImages[0]
     : {
-        id: "hero-finance",
+        id: "lau-hero-main",
         description: "LAU Financial Dashboard",
         imageUrl: "https://picsum.photos/seed/lau-hero/1200/600",
         imageHint: "finance dashboard"
       };
+
+  const scrollToWaitlist = () => {
+    document.getElementById('founders')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -36,8 +40,8 @@ export function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="h-12 px-8 text-lg bg-primary" asChild>
-                <a href="#founders">Solicitar Acceso Founder</a>
+              <Button size="lg" className="h-12 px-8 text-lg bg-primary" onClick={scrollToWaitlist}>
+                Solicitar Acceso Founder
               </Button>
               <Button size="lg" variant="outline" className="h-12 px-8 text-lg border-primary text-primary hover:bg-primary/5" asChild>
                 <a href="#evidence">Ver Rendimiento Histórico</a>

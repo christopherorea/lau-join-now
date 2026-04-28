@@ -2,10 +2,10 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-finance",
-      "description": "Professional clean finance dashboard with growth charts",
-      "imageUrl": "https://picsum.photos/seed/clarity-hero/1200/600",
-      "imageHint": "finance dashboard"
+      "id": "lau-hero-main",
+      "description": "LAU Intelligence Terminal - Clean financial interface",
+      "imageUrl": "https://picsum.photos/seed/lau-ai-terminal/1200/600",
+      "imageHint": "financial technology"
     },
     {
       "id": "feature-analysis",
