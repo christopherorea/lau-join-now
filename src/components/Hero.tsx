@@ -7,13 +7,12 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ShieldCheck, LineChart, Sparkles } from "lucide-react";
 
 export function Hero() {
-  // Buscamos la imagen específica para el Hero de LAU
   const heroImage = (PlaceHolderImages && PlaceHolderImages.length > 0) 
     ? PlaceHolderImages.find((img) => img.id === "lau-hero-main") || PlaceHolderImages[0]
     : {
         id: "lau-hero-main",
         description: "LAU Financial Dashboard",
-        imageUrl: "https://picsum.photos/seed/lau-hero/1200/600",
+        imageUrl: "/lau-join-now/Lau.jpeg",
         imageHint: "finance dashboard"
       };
 

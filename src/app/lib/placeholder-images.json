@@ -3,9 +3,9 @@
   "placeholderImages": [
     {
       "id": "lau-hero-main",
-      "description": "LAU Intelligence Terminal - Clean financial interface",
-      "imageUrl": "https://picsum.photos/seed/lau-ai-terminal/1200/600",
-      "imageHint": "financial technology"
+      "description": "LAU Intelligence Terminal - Local Infrastructure",
+      "imageUrl": "/lau-join-now/Lau.jpeg",
+      "imageHint": "financial dashboard"
     },
     {
       "id": "feature-analysis",
