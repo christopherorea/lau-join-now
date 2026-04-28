@@ -62,7 +62,7 @@ export function FoundersWaitlist() {
               <CardContent className="p-0">
                 <iframe 
                   id="form-iframe"
-                  src="https://docs.google.com/forms/d/e/1FAIpQLSfD_K_D_M_S_M_S_M_S_M/viewform?embedded=true" 
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSegy1tbr1WVboVZhP3HpQzvIFtXhH6Fu_L-qYyFdvrHJCXJBQ/viewform?embedded=true" 
                   width="100%" 
                   height="800" 
                   frameBorder="0" 
