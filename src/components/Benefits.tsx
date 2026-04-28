@@ -4,7 +4,7 @@ import { ShieldCheck, Target, Zap, BarChart3 } from "lucide-react";
 const features = [
   {
     title: "Resultados Validados",
-    description: "No somos una promesa. LAU utiliza el Modelo de Markowitz para maximizar ganancias arriesgando lo mínimo, con un historial probado de consistencia.",
+    description: "No somos una promesa. LAU utiliza matemáticas avanzadas para maximizar ganancias arriesgando lo mínimo, con un historial probado de consistencia.",
     icon: BarChart3,
     color: "text-accent"
   },
