@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -6,13 +7,15 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ShieldCheck, LineChart, Sparkles } from "lucide-react";
 
 export function Hero() {
-  // Safe lookup with fallback to prevent "imageUrl of undefined" crash
-  const heroImage = PlaceHolderImages.find((img) => img.id === "hero-finance") || {
-    id: "hero-finance",
-    description: "LAU Financial Dashboard",
-    imageUrl: "https://picsum.photos/seed/lau-hero/1200/600",
-    imageHint: "finance dashboard"
-  };
+  // Robust lookup with a hardcoded fallback
+  const heroImage = (PlaceHolderImages && PlaceHolderImages.length > 0) 
+    ? PlaceHolderImages.find((img) => img.id === "hero-finance") || PlaceHolderImages[0]
+    : {
+        id: "hero-finance",
+        description: "LAU Financial Dashboard",
+        imageUrl: "https://picsum.photos/seed/lau-hero/1200/600",
+        imageHint: "finance dashboard"
+      };
 
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
