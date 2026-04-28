@@ -6,7 +6,13 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ShieldCheck, LineChart, Sparkles } from "lucide-react";
 
 export function Hero() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === "hero-finance")!;
+  // Safe lookup with fallback to prevent "imageUrl of undefined" crash
+  const heroImage = PlaceHolderImages.find((img) => img.id === "hero-finance") || {
+    id: "hero-finance",
+    description: "LAU Financial Dashboard",
+    imageUrl: "https://picsum.photos/seed/lau-hero/1200/600",
+    imageHint: "finance dashboard"
+  };
 
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
@@ -56,6 +62,7 @@ export function Hero() {
                 fill
                 className="object-cover"
                 data-ai-hint={heroImage.imageHint}
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent pointer-events-none" />
             </div>
